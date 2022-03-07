@@ -97,38 +97,75 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #0e0707;
   height: 100%;
+  width:100%;
+
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
   padding: 2em;
-  font-size: 1.25em;
+  /*solution didn't have this*/
+ /* font-size: 1.25em;*/
   height: 100%;
+  /* solution code I missed*/
+  font-weight:700;
+  color:#fff;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   display:flex;
-  font-weight: 700;
+/*remove due to this property being added on the body element */
+  /*font-weight: 700;*/
   justify-content:space-between;
+/* solution code I missed*/
+  flex-flow: row wrap;
+  align-items:center;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  align-items:center;
-  color: #fff;
-  display:flex;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  justify-content:center;
-  background-color: #f16059;
-  height: 300px;
-  width:30%;
-
+        align-items:center;
+        color: #fff;
+        display:flex;
+        justify-content:center;
+  /*originally wrote it */
+  /*background-color: #0e0707;
+  height: 425px;
+  width:32%;
+  padding:2% 1%;*/
+    /*solution code*/
+         color:#fff;
+         height:auto;
+    /*end*/
+         line-height: 1.5em;
+         font-size: 1.25em;
+ 
 }
-
+/* setting border solid and color */
+/*removed from this section and added in media query*/
+/*.div-2 {
+    border-color: #ccc;
+    border-left-style:solid;
+    border-right-style:solid;
+   
+}
+*/
+/*solution did not have this
+.div-1, .div-2, .div-3 p{
+    align-items:center;
+    display:flex;
+    justify-content:center;
+}
+*/
+/*solution code */
+    .wrapper span {
+        font-family: 'Lora', sans-serif;
+        font-size:1.3em;
+    }
+/*end*/
 
 
 
@@ -211,6 +248,18 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/*solution i did not have on original code*/
+@media all and (min-width:1200px){
+
+    .div-1, .div-2, .div-3 {
+        flex-basis:30%;
+    }
+
+    .div-1, .div-2 {
+        border-right: 1px solid #555;
+        padding-right:30px;
+    }
+}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
